@@ -21,8 +21,8 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/username/multi-user-chat-room.git
-   cd multi-user-chat-room
+   git clone https://github.com/username/Bamboo-Chat.git
+   cd Bamboo-Chat
    ```
 
 2. **Install Dependencies**
