@@ -8,7 +8,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 - **Multi-Room Support**: Users can join multiple chat rooms.
 - **Authentication**: Secure user login and registration using Supabase.
 - **User Profiles**: Profiles with basic information displayed in chat rooms.
-- **Typing Indicators & Online Status** (Optional).
+- **Typing Indicators & Online Status**.
 
 ## 🛠 Tech Stack
 
