@@ -62,7 +62,8 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 
 - [x] Setup Next js
 - [x] Setup Shadcn ui
-- [ ] Loading...
+- [x] Setup Supabase
+- [ ] Login
 
 
 ## 📝 Usage
