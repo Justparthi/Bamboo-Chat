@@ -58,7 +58,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 - **UserAuth**: Handles user login and registration via Supabase.
 - **UserProfile**: Displays the logged-in user's profile and other users' profiles in the room.
 
-## Flow of Exection
+## 🔃 Flow of Exection
 
 - [x] Setup Next js
 - [x] Setup Shadcn ui
