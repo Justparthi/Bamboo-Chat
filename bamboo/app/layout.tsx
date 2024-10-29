@@ -1,6 +1,7 @@
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 
 const geistSans = Space_Grotesk({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
+          <Toaster position="top-center" />
         </ThemeProvider>
       </body>
     </html>
