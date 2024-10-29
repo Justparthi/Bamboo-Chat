@@ -12,7 +12,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 
 ## 🛠 Tech Stack
 
-- **Frontend**: Next.js with TypeScript
+- **Frontend**: Next.js with TypeScript, Shadcn-UI
 - **Backend**: Supabase for real-time database and authentication
 - **Database**: PostgreSQL (managed by Supabase)
 - **WebSockets**: Supabase real-time capabilities
