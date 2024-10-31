@@ -68,7 +68,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 - [ ] Manipulate Messages
 - [ ] Realtime Chat
 - [ ] Pagination
-- [ ] 
+- [ ] Logout
 
 
 ## 📝 Usage
