@@ -65,7 +65,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 - [x] Setup Supabase
 - [x] Authentication
 - [x] Chat Integration
-- [ ] Manipulate Messages
+- [x] Manipulate Messages
 - [ ] Realtime Chat
 - [ ] Pagination
 - [ ] Logout
