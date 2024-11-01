@@ -117,7 +117,7 @@ export function EditAlert() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-      <button id='trigger-edit'>Edit Message</button>
+      <button id='trigger-edit'></button>
       </DialogTrigger>
       <DialogContent className="w-full">
         <DialogHeader>

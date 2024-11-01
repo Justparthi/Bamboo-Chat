@@ -14,6 +14,8 @@ const ChatInput = () => {
 
     const addMessage = useMessage((state) => state.addMessage)
 
+    const setOptimisticIds = useMessage((state) => state.setOptimisticIds)
+
     const supabase = supabaseBrowser()
 
     const handleSendMessage = async (text:string) => {
@@ -37,7 +39,7 @@ const ChatInput = () => {
         }
 
         addMessage(newMessage as Imessage);
-
+        setOptimisticIds(newMessage.id);
 
         const {error} =  await supabase.from("message").insert({text})
 
