@@ -5,7 +5,6 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 ## 🚀 Features
 
 - **Real-Time Messaging**: Instant chat with users in the same room.
-- **Multi-Room Support**: Users can join multiple chat rooms.
 - **Authentication**: Secure user login and registration using Supabase.
 - **User Profiles**: Profiles with basic information displayed in chat rooms.
 - **Typing Indicators & Online Status**.
@@ -77,7 +76,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 ## 📝 Usage
 
 1. **Sign Up / Log In**: Create an account or log in with an existing account.
-2. **Join a Chat Room**: Select or create a chat room to join.
+2. **Join a Chat Room**: Select a chat room to join.
 3. **Start Chatting**: Send messages in real-time and interact with other users in the room.
 
 ## 🌐 Deployment
