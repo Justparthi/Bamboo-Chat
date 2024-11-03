@@ -27,7 +27,7 @@ export default function ListMessages() {
 			.channel("chat-room")
 			.on(
 				"postgres_changes",
-				{ event: "INSERT", schema: "public", table: "messages" },
+				{ event: "INSERT", schema: "public", table: "message" },
 				async (payload) => {
 					if (!optimisticIds.includes(payload.new.id)) {
 						const { error, data } = await supabase
@@ -58,14 +58,14 @@ export default function ListMessages() {
 			)
 			.on(
 				"postgres_changes",
-				{ event: "DELETE", schema: "public", table: "messages" },
+				{ event: "DELETE", schema: "public", table: "message" },
 				(payload) => {
 					optimisticDeleteMessage(payload.old.id);
 				}
 			)
 			.on(
 				"postgres_changes",
-				{ event: "UPDATE", schema: "public", table: "messages" },
+				{ event: "UPDATE", schema: "public", table: "message" },
 				(payload) => {
 					optimisticUpdateMessage(payload.new as Imessage);
 				}
