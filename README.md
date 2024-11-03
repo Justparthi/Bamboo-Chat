@@ -86,7 +86,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 
 ## 📞 Support
