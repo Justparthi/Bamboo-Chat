@@ -71,6 +71,7 @@ Welcome to the **Bamboo-Chat** application, a real-time chat platform built with
 - [x] Logout
 - [ ] UI
 - [ ] Deploy
+- [ ] 
 
 
 ## 📝 Usage
