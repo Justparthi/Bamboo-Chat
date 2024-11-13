@@ -3,10 +3,10 @@ import React from 'react';
 const TestimonialSection = () => {
   const testimonials = [
     {
-      name: 'John Doe',
-      title: 'CEO, Acme Corp',
+      name: 'Mike W.',
+      title: 'Community Leader',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      quote: 'This product has been a game-changer for our business. The team is incredible and the support is top-notch.'
+      quote: 'I run an online community for gaming enthusiasts, and Bamboo Chat has been incredible for keeping everyone connected. Whether we’re chatting in rooms, it’s fast, fun, and keeps the conversation flowing.'
     },
     {
       name: 'Jane Smith',
