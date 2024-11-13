@@ -6,6 +6,11 @@ import { Input } from "@/components/ui/input";
 import ChatInput from "@/components/ChatInput";
 import ChatMessage from "@/components/ChatMessage";
 import ChatAbout from "@/components/ChatAbout";
+import Example from "@/components/Hero";
+import Features from "@/components/Features";
+import Header from "@/components/Header";
+import TestimonialSection from "@/components/Testimonial";
+import FeatuesH from "@/components/FearureHero";
 
 export default async function Page() {
 	const supabase = await supabaseServer();
@@ -31,3 +36,20 @@ export default async function Page() {
 		</>
 	);
 }
+
+
+// export default async function Page() {
+// 	const supabase = await supabaseServer();
+// 	const { data } = await supabase.auth.getSession();
+
+// 	return (
+// 		<>
+// 			<Header />
+// 			<Example />
+// 			<Features />
+// 			<FeatuesH />
+// 			<TestimonialSection />
+
+// 		</>
+// 	);
+// }
