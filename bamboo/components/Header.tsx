@@ -68,8 +68,8 @@ export default function Header({ user }: { user: User | undefined }) {
             <span className="sr-only">Bamboo Chat</span>
             <img
               alt=""
-              src="https://i.ibb.co/dcry0h1/Screenshot-2024-11-13-223910.png"
-              className="h-8 w-auto"
+              src="https://i.ibb.co/sKZ7d8V/Screenshot-2024-11-13-232200-removebg-preview.png"
+              className="h-10 w-auto"
             />
           </a>
         </div>
