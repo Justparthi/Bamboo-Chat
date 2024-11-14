@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import TestimonialSection from "@/components/Testimonial";
 import FeatuesH from "@/components/FearureHero";
 import Footer from "@/components/Footer";
+import CTASection from "@/components/Cta";
 
 // export default async function Page() {
 // 	const supabase = await supabaseServer();
@@ -50,6 +51,7 @@ export default async function Page() {
 			<Example />
 			<Features />
 			<FeatuesH />
+			<CTASection />
 			<TestimonialSection />
 			<Footer />
 

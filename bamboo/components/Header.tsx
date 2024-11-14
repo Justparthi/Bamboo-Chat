@@ -87,11 +87,11 @@ export default function Header({ user }: { user: User | undefined }) {
           <a href="/#features" className="text-sm/6 font-semibold text-gray-200">  
             Features
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-200">
-            Marketplace
+          <a href="/#test" className="text-sm/6 font-semibold text-gray-200">
+            Testimonial
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-200">
-            Company
+          <a href="/#contact" className="text-sm/6 font-semibold text-gray-200">
+            Contact
           </a>
           
         </PopoverGroup>
