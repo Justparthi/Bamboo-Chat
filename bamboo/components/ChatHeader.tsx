@@ -32,11 +32,7 @@ export default function ChatHeader({ user }: { user: User | undefined }) {
 					<h1 className="text-xl font-bold">Daily Chat</h1>
 					<ChatPresence />
 				</div>
-				{user ? (
-					<Button onClick={handleLogout}>Logout</Button>
-				) : (
-					<Button onClick={handleLoginWithGithub}>Login</Button>
-				)}
+				
 			</div>
 		</div>
 	);

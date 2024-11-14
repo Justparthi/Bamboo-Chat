@@ -66,11 +66,7 @@ export default function Header({ user }: { user: User | undefined }) {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Bamboo Chat</span>
-            <img
-              alt=""
-              src="https://i.ibb.co/sKZ7d8V/Screenshot-2024-11-13-232200-removebg-preview.png"
-              className="h-10 w-auto"
-            />
+            
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -88,7 +84,7 @@ export default function Header({ user }: { user: User | undefined }) {
             Home
           </a>
 
-          <a href="#features" className="text-sm/6 font-semibold text-gray-200">  
+          <a href="/#features" className="text-sm/6 font-semibold text-gray-200">  
             Features
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-200">
@@ -108,7 +104,7 @@ export default function Header({ user }: { user: User | undefined }) {
             <Button onClick={handleLoginWithGithub}>Login</Button>
           )}
           &nbsp;&nbsp;
-          <div ><Button style={{background:"rgb(17, 24, 39)"}}>Get Started</Button></div>
+          <div ><Button style={{background:"rgb(17, 24, 39)"}}><a href="/chat">Get Started</a></Button></div>
                 
 
         </div>

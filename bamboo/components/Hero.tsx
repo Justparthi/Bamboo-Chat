@@ -24,7 +24,7 @@ export default function Example() {
                 <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl transition-all duration-300 ease-in-out group-hover:scale-110">
                   <img
                     className="size-full object-cover object-top"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
+                    src="https://i.ibb.co/V3x6rQn/Screenshot-2024-11-14-215919.png"
                     alt=""
                   />
                 </div>
