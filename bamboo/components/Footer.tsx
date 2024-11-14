@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-        <footer className="bg-gray-900 text-white py-8 sm:py-12">
+        <footer className="bg-gray-900 text-white py-8 sm:py-12" id='contact'>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col sm:flex-row justify-between items-center">
       <p className="text-sm">© 2024 Bamboo Chat. All rights reserved.</p>
