@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
+<<<<<<< HEAD
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
       },
@@ -22,6 +23,14 @@ const nextConfig: NextConfig = {
     ],
   },
   // Add other configurations as needed
+=======
+        protocol: 'https',  // The protocol is 'https'
+        hostname: 'avatars.githubusercontent.com',  // The hostname of the remote image
+      },
+    ],
+  },
+  // Add any other config options you need here
+>>>>>>> 7e07509a79e99daa898803e224d7e9c30fe51a98
 };
 
 export default nextConfig;
