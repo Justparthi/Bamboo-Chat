@@ -1,4 +1,3 @@
-import { User } from "@supabase/supabase-js";
 import { create } from "zustand";
 import { LIMIT_MESSAGE } from "../constant";
 
@@ -61,15 +60,15 @@ export const useMessage = create<MessageState>()((set) => ({
         }
     }),
     optimisticUpdateMessage: (updateMessage) =>
-		set((state) => {
-			return {
-				messages: state.messages.filter((message) => {
-					if (message.id === updateMessage.id) {
-						(message.text = updateMessage.text),
-							(message.is_edit = updateMessage.is_edit);
-					}
-					return message;
-				}),
-			};
-		}),
+        set((state) => {
+          return {
+            messages: state.messages.map((message) => {
+              if (message.id === updateMessage.id) {
+                message.text = updateMessage.text;
+                message.is_edit = updateMessage.is_edit;
+              }
+              return message;
+            }),
+          };
+        }),      
 }));

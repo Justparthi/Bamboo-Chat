@@ -1,29 +1,9 @@
 "use client";
 import React from "react";
-import { Button } from "./ui/button";
-import { supabaseBrowser } from "@/lib/supabase/browser";
 import { User } from "@supabase/supabase-js";
-import { useRouter } from "next/navigation";
 import ChatPresence from "./ChatPresence";
 
-export default function ChatHeader({ user }: { user: User | undefined }) {
-	const router = useRouter();
-
-	const handleLoginWithGithub = () => {
-		const supabase = supabaseBrowser();
-		supabase.auth.signInWithOAuth({
-			provider: "github",
-			options: {
-				redirectTo: location.origin + "/auth/callback",
-			},
-		});
-	};
-
-	const handleLogout = async () => {
-		const supabase = supabaseBrowser();
-		await supabase.auth.signOut();
-		router.refresh();
-	};
+export default function ChatHeader({  }: { user: User | undefined }) {
 
 	return (
 		<div className="h-20">

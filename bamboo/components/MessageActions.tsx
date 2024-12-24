@@ -1,7 +1,4 @@
-"use client"
-
 import React, { useRef } from 'react'
-
 import {
     AlertDialog,
     AlertDialogAction,
@@ -12,7 +9,7 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-  } from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog"
 
 import { Button } from './ui/button'
 import { Imessage, useMessage } from '@/lib/store/messages'
@@ -29,109 +26,104 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
- 
 
 const DeleteAlert = () => {
-
     const actionMessage = useMessage((state) => state.actionMessage)
-
     const optimisticDeleteMessage = useMessage((state) => state.optimisticDeleteMessage)
 
     const handleDeleteMessage = async () => {
-        const supabase = supabaseBrowser()
+        if (actionMessage?.id) {
+            const supabase = supabaseBrowser()
 
-        optimisticDeleteMessage(actionMessage?.id!)
+            optimisticDeleteMessage(actionMessage.id)
 
-        const {error} = await supabase.from("message").delete().eq("id", actionMessage?.id!)
+            const { error } = await supabase.from("message").delete().eq("id", actionMessage.id)
 
-
-        if(error){
-            toast.error(error.message)
-        }else{
-            toast.success("Successfully deleted a message")
+            if (error) {
+                toast.error(error.message)
+            } else {
+                toast.success("Successfully deleted a message")
+            }
+        } else {
+            toast.error("Message not found")
         }
-
     }
 
-
-  return (
-    <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <button id='trigger-delete'></button>
-      </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers. 
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleDeleteMessage}>Continue</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
-  )
+    return (
+        <AlertDialog>
+            <AlertDialogTrigger asChild>
+                <button id='trigger-delete'></button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+                <AlertDialogHeader>
+                    <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                        This action cannot be undone. This will permanently delete your
+                        account and remove your data from our servers. 
+                    </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleDeleteMessage}>Continue</AlertDialogAction>
+                </AlertDialogFooter>
+            </AlertDialogContent>
+        </AlertDialog>
+    )
 }
-
 
 export default DeleteAlert
 
-
 export function EditAlert() {
+    const actionMessage = useMessage((state) => state.actionMessage)
+    const optimisticUpdateMessage = useMessage((state) => state.optimisticUpdateMessage)
+    const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>
 
-  const actionMessage = useMessage((state) => state.actionMessage)
-  const optimisticUpdateMessage = useMessage((state) => state.optimisticUpdateMessage)
-  const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>
-
-  const handleEdit = async () => {
-  const supabase = supabaseBrowser()
-  const text = inputRef.current.value.trim()
-  if(text){
-    optimisticUpdateMessage({
-      ...actionMessage,
-      text,
-      is_edit: true,
-    } as Imessage );
-    const {error} = await supabase
-      .from("message")
-      .update({text, is_edit: true})
-      .eq("id", actionMessage?.id!);
-      if(error){
-        toast.error(error.message)
-    }else{
-        toast.success("Message Updated")
+    const handleEdit = async () => {
+        if (actionMessage?.id) {
+            const supabase = supabaseBrowser()
+            const text = inputRef.current.value.trim()
+            if (text) {
+                optimisticUpdateMessage({
+                    ...actionMessage,
+                    text,
+                    is_edit: true,
+                } as Imessage)
+                const { error } = await supabase
+                    .from("message")
+                    .update({ text, is_edit: true })
+                    .eq("id", actionMessage.id)
+                if (error) {
+                    toast.error(error.message)
+                } else {
+                    toast.success("Message Updated")
+                }
+                document.getElementById("trigger-edit")?.click()
+            } else {
+                document.getElementById("trigger-edit")?.click()
+                document.getElementById("trigger-delete")?.click()
+            }
+        } else {
+            toast.error("Message not found")
+        }
     }
-    document.getElementById("trigger-edit")?.click();
-  }else{
-    document.getElementById("trigger-edit")?.click();
-    document.getElementById("trigger-delete")?.click();
-  }
 
-  }
-
-
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-      <button id='trigger-edit'></button>
-      </DialogTrigger>
-      <DialogContent className="w-full">
-        <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
-        </DialogHeader>
-        <Input id="name" defaultValue={actionMessage?.text} ref={inputRef} />
-        <DialogFooter>
-          <Button type="submit" onClick={handleEdit}>Save changes</Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
-  )
+    return (
+        <Dialog>
+            <DialogTrigger asChild>
+                <button id='trigger-edit'></button>
+            </DialogTrigger>
+            <DialogContent className="w-full">
+                <DialogHeader>
+                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogDescription>
+                        Make changes to your profile here. Click save when you are done.
+                    </DialogDescription>
+                </DialogHeader>
+                <Input id="name" defaultValue={actionMessage?.text} ref={inputRef} />
+                <DialogFooter>
+                    <Button type="submit" onClick={handleEdit}>Save changes</Button>
+                </DialogFooter>
+            </DialogContent>
+        </Dialog>
+    )
 }
-

@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const posts = [
   {
     id: 1,
@@ -84,7 +86,7 @@ export default function Example() {
                 <p className="mt-5 line-clamp-3 text-sm/6 text-gray-400">{post.description}</p>
               </div>
               <div className="relative mt-8 flex items-center gap-x-4">
-                <img alt="" src={post.author.imageUrl} className="size-10 rounded-full bg-gray-800" />
+                <Image alt="" src={post.author.imageUrl} width={100} height={100} className="size-10 rounded-full bg-gray-800" />
                 <div className="text-sm/6">
                   <p className="font-semibold text-white">
                     <a href={post.author.href}>

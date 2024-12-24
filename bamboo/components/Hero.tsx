@@ -93,12 +93,12 @@ export default function Example() {
                   <div className="px-6 pb-14 pt-6 transition-all duration-300 ease-in-out group-hover:scale-110">
     {/* Example Chat Message */}
     <div className="flex flex-col space-y-2">
-        <div className="bg-blue-100 p-3 rounded-lg text-sm text-gray-800">
-            <strong>Encrypted Message:</strong> {"U2FsdGVkX1+HpO58H4Zi09+wdLg9F=="} 
-        </div>
-        <div className="bg-green-100 p-3 rounded-lg text-sm text-gray-800">
-            <strong>Decrypted Message:</strong> "Hello, this is a secret message!"
-        </div>
+    <div className="bg-blue-100 p-3 rounded-lg text-sm text-gray-800">
+                        <strong>Encrypted Message:</strong> {"U2FsdGVkX1+HpO58H4Zi09+wdLg9F=="}
+                      </div>
+                      <div className="bg-green-100 p-3 rounded-lg text-sm text-gray-800">
+                        <strong>Decrypted Message:</strong> &quot;Hello, this is a secret message!&quot;
+                      </div>
         <div className="flex items-center justify-between text-xs text-gray-500">
             <span>Just Now</span>
             <button className="text-blue-500">Reply</button>

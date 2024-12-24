@@ -4,12 +4,24 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',  // The protocol is 'https'
-        hostname: 'avatars.githubusercontent.com',  // The hostname of the remote image
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',  // Add images.unsplash.com to the allowed domains
       },
     ],
   },
-  // Add any other config options you need here
+  // Add other configurations as needed
 };
 
 export default nextConfig;

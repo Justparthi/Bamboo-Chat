@@ -1,5 +1,6 @@
 import React from 'react';
 import { Upload, Lock, Server } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   {
@@ -48,7 +49,7 @@ export default function Example() {
               </dl>
             </div>
           </div>
-          <img
+          <Image
             alt="Product screenshot"
             src="https://i.ibb.co/qYn2rMq/Screenshot-2024-11-14-213804.png"
             width={2432}
