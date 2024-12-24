@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'tailwindui.com',  // Allow images from tailwindui.com
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',  // Add images.unsplash.com to the allowed domains
+      },
     ],
   },
   // Any other configuration options can be added here
