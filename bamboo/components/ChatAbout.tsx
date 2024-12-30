@@ -9,6 +9,8 @@ export default function ChatAbout() {
 					This is a chat application that power by supabase realtime
 					db. Login to send message
 				</p>
+
+				<p>(Apologies for the inconvenience. The website is hosted on the free tier of Vercel, and since I’m using Supabase for the database, there seems to be an issue. If you'd like to see how it works, feel free to create your own Supabase credentials and run it locally to view the output.)</p>
 			</div>
 		</div>
 	);
